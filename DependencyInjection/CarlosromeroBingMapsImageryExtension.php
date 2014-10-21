@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CarlosromeroSafeBrowsingExtension extends Extension
+class CarlosromeroBingMapsImageryExtension extends Extension
 {
     /**
      * {@inheritDoc}

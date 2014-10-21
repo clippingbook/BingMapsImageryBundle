@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="carlosromero_bing_maps_imagery.client" class="%carlosromero_bing_maps_imagery.client.class%">
+        </service>
+        <service id="carlosromero_bing_maps_imagery.api_client" class="%carlosromero_bing_maps_imagery.api_client.class%">
+            <argument type="service" id="carlosromero_bing_maps_imagery.client" />
+            <argument key="key">%carlosromero_bing_maps_imagery.key%</argument>
+            <argument key="mapType">%carlosromero_bing_maps_imagery.map_type%</argument>
+            <argument key="baseUrl">%carlosromero_bing_maps_imagery.base_url%</argument>
+
+        </service>
+
+    </services>
+</container>

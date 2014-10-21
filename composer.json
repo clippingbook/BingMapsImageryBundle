@@ -1,0 +1,24 @@
+{
+    "name": "carlosromero/BingMapsImageryBundle",
+    "type": "library",
+    "description": "A Symfony Bing Maps Imagery API REST bundle",
+    "keywords": ["bing","maps","imagery", "bundle", "symfony"],
+    "homepage": "http://github.com/carlosromero/BingMapsImageryBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Romero",
+            "email": "hola@carlosromero.com"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.*",
+        "guzzle/guzzle": "3.8.*"
+},
+    "autoload": {
+        "psr-0": { "Carlosromero\\BingMapsImageryBundle": "" }
+    },
+    "target-dir": "Carlosromero/BingMapsImageryBundle"
+}

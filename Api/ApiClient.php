@@ -48,10 +48,13 @@ class ApiClient {
      * @param $query
      * @return array|bool
      */
-    function query($query, $width = 500, $height =400)
+    function query($query, $width = 500, $height =400, $options =  array())
     {
         $query = rawurlencode($query);
         $url = str_replace(array('%APIKEY%', '%MAP_TYPE%', '%QUERY%','%WIDTH%', '%HEIGHT%'), array($this->key, $this->mapType, $query, $width, $height), $this->baseUrl);
+        foreach ($options as $option => $value) {
+            $url .= "&$option=$value";
+        }
         $request = $this->client->post($url);
         try {
             $response = $request->send();

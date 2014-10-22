@@ -50,12 +50,16 @@ class ApiClient {
      */
     function query($query, $width = 500, $height =400)
     {
-        $query = urlencode($query);
+        $query = rawurlencode($query);
         $url = str_replace(array('%APIKEY%', '%MAP_TYPE%', '%QUERY%','%WIDTH%', '%HEIGHT%'), array($this->key, $this->mapType, $query, $width, $height), $this->baseUrl);
         $request = $this->client->post($url);
-        $response = $request->send();
+        try {
+            $response = $request->send();
+        } catch (\Exception $e) {
+            return false;
+        }
         $bodyResponse = $response->getBody(true);
-        return empty($bodyResponse)? false : explode("\n", $bodyResponse);
+        return ($response->getStatusCode() != 200)? false :  $bodyResponse;
     }
 
 }

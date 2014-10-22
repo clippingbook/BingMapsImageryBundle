@@ -72,7 +72,7 @@ String with binary data of image file or false if API returns errors
 
 
 ``` php
- if ($mapImage = $this->get('carlosromero_bing_maps_imagery.api_client')->query($term, 600, 500, array('mapLayer'=>'TrafficFlow'))) {
+ if ($mapImage = $this->get('carlosromero_bing_maps_imagery.api_client')->query('Torre Eiffel', 600, 500, array('mapLayer'=>'TrafficFlow'))) {
    $dir = __DIR__ . '/../../../../web';
    $pathname = '/img/maps/'.uniqid().'.jpg';
    file_put_contents($dir.$pathname, $mapImage);

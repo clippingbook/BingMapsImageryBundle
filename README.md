@@ -5,7 +5,7 @@ Symfony2 bundle to use Bing Maps Imagery API REST
 
 Installation
 ------------
-### Step 1: Download FOSUserBundle using composer
+### Step 1: Download it using composer
 
 Add BingMapsImageryBundle by running the command:
 
@@ -27,7 +27,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Carlosromero\CarlosromeroBingMapsImageryBundle(),
+        new Carlosromero\BingMapsImageryBundle\CarlosromeroBingMapsImageryBundle(),
     );
 }
 ```
@@ -51,14 +51,20 @@ Use
 
 ### Description
 
+``` php
 mixed function query (string $term[, integer $width[, integer $height[,array $options]]])
+```
 
 ### Parameters
 
 $term The words we want to search
+
 $width Width of the image in pixels
+
 $height Height of the image in pixels
+
 $options Array with optional parameters for the API query, see http://msdn.microsoft.com/en-us/library/ff701724.aspx
+
 
 ### Return values
 

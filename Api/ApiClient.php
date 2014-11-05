@@ -6,7 +6,7 @@
  * Time: 19:25
  */
 
-namespace Carlosromero\BingMapsImageryBundle\Api;
+namespace Clippingbook\BingMapsImageryBundle\Api;
 
 use Guzzle\Http\Client;
 

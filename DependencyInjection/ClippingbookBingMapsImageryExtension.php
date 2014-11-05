@@ -1,6 +1,6 @@
 <?php
 
-namespace Carlosromero\BingMapsImageryBundle\DependencyInjection;
+namespace Clippingbook\BingMapsImageryBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CarlosromeroBingMapsImageryExtension extends Extension
+class ClippingbookBingMapsImageryExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -28,11 +28,11 @@ class CarlosromeroBingMapsImageryExtension extends Extension
 
        $loader->load('bing_maps_imagery.xml');
 
-       $container->setParameter('carlosromero_bing_maps_imagery.api_client.class', $config['class']['api_client']);
-       $container->setParameter('carlosromero_bing_maps_imagery.client.class', $config['class']['client']);
+       $container->setParameter('clippingbook_bing_maps_imagery.api_client.class', $config['class']['api_client']);
+       $container->setParameter('clippingbook_bing_maps_imagery.client.class', $config['class']['client']);
 
        foreach (array('key', 'map_type', 'base_url') as $attribute) {
-           $container->setParameter('carlosromero_bing_maps_imagery.'.$attribute, $config[$attribute]);
+           $container->setParameter('clippingbook_bing_maps_imagery.'.$attribute, $config[$attribute]);
        }
     }
 }

@@ -5,9 +5,9 @@
  * Date: 19/03/14
  * Time: 19:27
  */
-namespace Carlosromero\BingMapsImageryBundle\Tests\Api;
+namespace Clippingbook\BingMapsImageryBundle\Tests\Api;
 
-use Carlosromero\BingMapsImageryBundle\Api\ApiClient;
+use Clippingbook\BingMapsImageryBundle\Api\ApiClient;
 use Guzzle\Http\Client;
 use Guzzle\Http\Message\Request;
 

@@ -1,9 +1,9 @@
 {
-    "name": "carlosromero/BingMapsImageryBundle",
+    "name": "clippingbook/BingMapsImageryBundle",
     "type": "library",
     "description": "A Symfony Bing Maps Imagery API REST bundle",
     "keywords": ["bing","maps","imagery", "bundle", "symfony"],
-    "homepage": "http://github.com/carlosromero/BingMapsImageryBundle",
+    "homepage": "http://github.com/clippingbook/BingMapsImageryBundle",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,7 @@
         "guzzle/guzzle": "3.8.*"
 },
     "autoload": {
-        "psr-0": { "Carlosromero\\BingMapsImageryBundle": "" }
+        "psr-0": { "Clippingbook\\BingMapsImageryBundle": "" }
     },
-    "target-dir": "Carlosromero/BingMapsImageryBundle"
+    "target-dir": "Clippingbook/BingMapsImageryBundle"
 }

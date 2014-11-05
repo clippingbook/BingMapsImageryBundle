@@ -1,6 +1,6 @@
 <?php
 
-namespace Carlosromero\BingMapsImageryBundle\DependencyInjection;
+namespace Clippingbook\BingMapsImageryBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
        $treeBuilder = new TreeBuilder();
-       $rootNode = $treeBuilder->root('carlosromero_bing_maps_imagery');
+       $rootNode = $treeBuilder->root('clippingbook_bing_maps_imagery');
 
        $rootNode
            ->children()
@@ -30,7 +30,7 @@ class Configuration implements ConfigurationInterface
                ->arrayNode('class')
                    ->addDefaultsIfNotSet()
                    ->children()
-                       ->scalarNode('api_client')->defaultValue('Carlosromero\\BingMapsImageryBundle\\Api\\ApiClient')->end()
+                       ->scalarNode('api_client')->defaultValue('Clippingbook\\BingMapsImageryBundle\\Api\\ApiClient')->end()
                        ->scalarNode('client')->defaultValue('Guzzle\\Http\\Client')->end()
                    ->end()
                ->end()

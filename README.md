@@ -10,10 +10,10 @@ Installation
 Add BingMapsImageryBundle by running the command:
 
 ``` bash
-$ php composer.phar require carlosromero/BingMapsImageryBundle
+$ php composer.phar require clippingbook/BingMapsImageryBundle
 ```
 
-Composer will install the bundle to your project's `vendor/carlosromero` directory.
+Composer will install the bundle to your project's `vendor/clippingbook` directory.
 
 ### Step 2: Enable the bundle
 
@@ -27,7 +27,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Carlosromero\BingMapsImageryBundle\CarlosromeroBingMapsImageryBundle(),
+        new Clippingbook\BingMapsImageryBundle\ClippingbookBingMapsImageryBundle(),
     );
 }
 ```
@@ -35,7 +35,7 @@ public function registerBundles()
 
 ``` yaml
 # app/config/config.yml
-carlosromero:
+clippingbook:
     bing_maps_imagery:
         key: your_key
 
@@ -72,7 +72,7 @@ String with binary data of image file or false if API returns errors
 
 
 ``` php
- if ($mapImage = $this->get('carlosromero_bing_maps_imagery.api_client')->query('Torre Eiffel', 600, 500, array('mapLayer'=>'TrafficFlow'))) {
+ if ($mapImage = $this->get('clippingbook_bing_maps_imagery.api_client')->query('Torre Eiffel', 600, 500, array('mapLayer'=>'TrafficFlow'))) {
    $dir = __DIR__ . '/../../../../web';
    $pathname = '/img/maps/'.uniqid().'.jpg';
    file_put_contents($dir.$pathname, $mapImage);
